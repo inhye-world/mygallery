@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+    <configuration>
+
+		<settings> 
+	     <setting name="jdbcTypeForNull" value="NULL" />
+	   </settings>
+		
+        <typeAliases>
+            <typeAlias type="bit.it.into.dto.BondDTO" alias="BondDTO"/>
+            <typeAlias type="bit.it.into.dto.CalculatorDTO" alias="CalculatorDTO"/>
+            <typeAlias type="bit.it.into.dto.StockInfoDTO" alias="StockInfoDTO"/>
+        </typeAliases>
+
+
+    </configuration>
