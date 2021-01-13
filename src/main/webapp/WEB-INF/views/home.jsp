@@ -11,23 +11,19 @@
 </head>
 <body>
 <h1>
-	그림 게시글을 올리는 피드를 만들것임.
+	나의 그림 리스트~
 </h1>
 <table width="500" border="1">
 	<tr>
 		<th>번호</th>
 		<th>제목</th>
-		<th>작성자</th>
-		<th>날짜</th>
-		<th>조회수</th>		
+		<th>날짜</th>	
 	</tr>
 	<c:forEach items="${list}" var="vo">
 	<tr>
 		<td>${vo.board_num}</td>
 		<td>${vo.board_title}</td>
-		<td>${vo.board_name}</td>
 		<td><fmt:formatDate value="${vo.board_date}" dateStyle="full" /></td>
-		<td>${vo.board_hit}</td>
 	</tr>
 	</c:forEach>
 </table>

@@ -7,15 +7,14 @@
 
 <html>
 <head>
-	<title>나의 그림들</title>
+	<title>오늘의 그림</title>
 </head>
 <body>
-<h1>
-	그림 게시글을 올리는 피드를 만들것임.
-</h1>
+<h2>피드를 쓰세요</h2>
+
 <table width="500" border="1">
 	<tr>
-		<th>번호</th>
+		<th>작성자</th>
 		<th>제목</th>
 		<th>작성자</th>
 		<th>날짜</th>
