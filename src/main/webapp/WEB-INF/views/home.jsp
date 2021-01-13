@@ -31,6 +31,6 @@
 	</tr>
 	</c:forEach>
 </table>
-
+<div><input id="write" onclick="location.href='write_view'" type="button" value="글작성"/></div>
 </body>
 </html>
