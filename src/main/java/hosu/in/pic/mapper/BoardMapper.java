@@ -6,4 +6,6 @@ import hosu.in.pic.vo.BoardVO;
 
 public interface BoardMapper {
 	public List<BoardVO> getList();
+
+	public void insertBoard(BoardVO boardVO);
 }

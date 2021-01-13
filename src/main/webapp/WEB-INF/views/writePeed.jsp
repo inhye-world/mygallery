@@ -13,23 +13,24 @@
 <h2>피드를 쓰세요</h2>
 
 <table width="500" border="1">
+
+<form:form class="writeForm" action="boardWrite" method="post">
 	<tr>
-		<th>작성자</th>
-		<th>제목</th>
-		<th>작성자</th>
-		<th>날짜</th>
-		<th>조회수</th>		
+		<td>제목</td>
+		<td><input id="board_title"	type="text" name="board_title" size="50"></td>
 	</tr>
-	<c:forEach items="${list}" var="vo">
+	
 	<tr>
-		<td>${vo.board_num}</td>
-		<td>${vo.board_title}</td>
-		<td>${vo.board_name}</td>
-		<td><fmt:formatDate value="${vo.board_date}" dateStyle="full" /></td>
-		<td>${vo.board_hit}</td>
+		<td>내용</td>
+		<td><textarea id="board_content" name="board_content"></textarea></td>
 	</tr>
-	</c:forEach>
+	<tr>
+		<td colspan = "2">
+			<input type="submit" value = "입력">
+		</td>
+	</tr>
+	</form:form>
 </table>
-<div><input id="write" onclick="location.href='write_view'" type="button" value="글작성"/></div>
+<a href="home">목록보기</a>
 </body>
 </html>

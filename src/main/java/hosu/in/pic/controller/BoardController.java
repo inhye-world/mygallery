@@ -4,7 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import hosu.in.pic.service.BoardService;
+import hosu.in.pic.service.BoardServiceImpl;
+import hosu.in.pic.vo.BoardVO;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
@@ -13,7 +14,7 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class BoardController {
 	
-	private BoardService service;
+	private BoardServiceImpl service;
 	
 	@RequestMapping(value = "/home")
 	public String list(Model model) {
@@ -24,10 +25,18 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value = "/write_view")
-	public String write(Model model) {
+	public String writePage(Model model) {
 		log.info("write your peed");
 		
 		return "writePeed";
+	}
+	
+	@RequestMapping(value = "/boardWrite")
+	public String write(BoardVO boardVO) throws Exception{
+		log.info("write doooowwwwn");
+		
+		service.writeBoard(boardVO);
+		return "redirect:home";
 	}
 	
 }
