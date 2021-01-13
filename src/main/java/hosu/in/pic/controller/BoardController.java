@@ -23,4 +23,11 @@ public class BoardController {
 		return "home";
 	}
 	
+	@RequestMapping(value = "/write_view")
+	public String write(Model model) {
+		log.info("write your peed");
+		
+		return "writePeed";
+	}
+	
 }
