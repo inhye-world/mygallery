@@ -37,4 +37,10 @@ public class BoardServiceImpl implements BoardService{
 		
 		return mapper.getCtt(board_num);
 	}
+
+	@Override
+	public void remove(int board_num) {
+		log.info("delete your story....");
+		mapper.delete(board_num);
+	}
 }

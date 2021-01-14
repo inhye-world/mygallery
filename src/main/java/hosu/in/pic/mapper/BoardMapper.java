@@ -9,5 +9,7 @@ public interface BoardMapper {
 
 	public void insertBoard(BoardVO boardVO);
 
-	BoardVO getCtt(int board_num);
+	public BoardVO getCtt(int board_num);
+
+	public void delete(int board_num);
 }

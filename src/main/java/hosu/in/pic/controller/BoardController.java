@@ -47,4 +47,12 @@ public class BoardController {
 		return "redirect:home";
 	}
 	
+	@RequestMapping(value = "/delete")
+	public String delete(BoardVO boardVO){
+		log.info("delete this shit");
+		
+		service.remove(boardVO.getBoard_num());
+		return "redirect:home";
+	}
+	
 }
