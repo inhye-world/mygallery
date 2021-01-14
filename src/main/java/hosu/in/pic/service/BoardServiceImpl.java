@@ -30,4 +30,11 @@ public class BoardServiceImpl implements BoardService{
 		log.info("write your story....");
 		mapper.insertBoard(boardVO);
 	}
+
+	@Override
+	public BoardVO getCtt(int board_num) {
+		log.info("read your write");
+		
+		return mapper.getCtt(board_num);
+	}
 }

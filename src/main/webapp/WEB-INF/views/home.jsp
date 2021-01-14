@@ -7,11 +7,11 @@
 
 <html>
 <head>
-	<title>나의 그림들</title>
+	<title>나의 기록들</title>
 </head>
 <body>
 <h1>
-	나의 그림 리스트~
+	나의 기록 리스트~
 </h1>
 <table width="500" border="1">
 	<tr>
@@ -22,7 +22,8 @@
 	<c:forEach items="${list}" var="vo">
 	<tr>
 		<td>${vo.board_num}</td>
-		<td>${vo.board_title}</td>
+		<td>
+			<a href="content?board_num=${vo.board_num}">${vo.board_title}</a></td>
 		<td><fmt:formatDate value="${vo.board_date}" dateStyle="full" /></td>
 	</tr>
 	</c:forEach>

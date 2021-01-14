@@ -8,4 +8,6 @@ public interface BoardMapper {
 	public List<BoardVO> getList();
 
 	public void insertBoard(BoardVO boardVO);
+
+	BoardVO getCtt(int board_num);
 }

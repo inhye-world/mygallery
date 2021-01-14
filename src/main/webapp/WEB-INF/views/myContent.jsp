@@ -10,23 +10,24 @@
 	<title>오늘의 기록</title>
 </head>
 <body>
-<h2>피드를 쓰세요</h2>
-
+<h2>이런걸 적었었지...</h2>
 <table width="500" border="1">
 
-<form:form class="writeForm" action="boardWrite" method="post">
+<form:form class="modify" method="post">
+<input type="hidden" name="board_num" value="${content.board_num}">
 	<tr>
 		<td>제목</td>
-		<td><input id="board_title"	type="text" name="board_title" size="50"></td>
+		<td><input id="board_title"	type="text" value="${content.board_title}"></td>
 	</tr>
 	
 	<tr>
 		<td>내용</td>
-		<td><textarea id="board_content" name="board_content"></textarea></td>
+		<td><textarea id="board_content" name="board_content">${content.board_content}</textarea></td>
 	</tr>
 	<tr>
 		<td colspan = "2">
-			<input type="submit" value = "입력">
+			<input type="submit" value = "수정">
+			<a href="delete?board_num=${content.board_num}">삭제</a>
 		</td>
 	</tr>
 	</form:form>

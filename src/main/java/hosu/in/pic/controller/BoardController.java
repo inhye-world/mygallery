@@ -24,6 +24,14 @@ public class BoardController {
 		return "home";
 	}
 	
+	@RequestMapping(value = "/content")
+	public String content(BoardVO boardVO, Model model) {
+		log.info("board content");
+		
+		model.addAttribute("content", service.getCtt(boardVO.getBoard_num()));
+		return "myContent";
+	}
+	
 	@RequestMapping(value = "/write_view")
 	public String writePage(Model model) {
 		log.info("write your peed");
