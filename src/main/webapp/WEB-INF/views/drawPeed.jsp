@@ -13,9 +13,8 @@
 <h2>아직은 연필화...</h2>
 <table width="500" border="1">
 	<thead>
-		<tr >
-				<th>제목</th>
-				<th>날짜</th>
+		<tr>
+			<td>제목</td>
 		</tr>
 	</thead>
 	<tbody>
