@@ -12,9 +12,21 @@
 <body>
 <h2>아직은 연필화...</h2>
 <table width="500" border="1">
-
+	<thead>
+		<tr >
+				<th>제목</th>
+				<th>날짜</th>
+		</tr>
+	</thead>
+	<tbody>
+		<c:forEach var="account" items="${accountTransactionList}" varStatus="status">
+				<tr>
+					<td class="test1">${account.dTitle}</td>
+					<td class="test1"><javatime:format value="${account.tran_date_time}" pattern=" yyyy-MM-dd HH:mm:ss"/></td>	
+				</tr>
+		</c:forEach>
+	</tbody>
 
 </table>
-<a href="home">목록보기</a>
 </body>
 </html>
