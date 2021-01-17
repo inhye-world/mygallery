@@ -12,9 +12,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GalleryVO {
-	private int board_num;
-	private String board_title;
-	private String board_name;
+	private int gallery_num;
+	private String pic_title;
 	private String board_content;
 	private Timestamp board_date;
 	private int board_hit;
